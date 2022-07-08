@@ -1,7 +1,7 @@
 ### Hi there 👋
 
-[![Solved.ac프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=thisiswoo)](https://solved.ac/thisiswoo)
-[![Solved.ac](http://mazassumnida.wtf/api/v2/generate_badge?boj={thisiswoo})](https://solved.ac/{thisiswoo})
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=thisiswoo)](https://solved.ac/thisiswoo)
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj={thisiswoo})](https://solved.ac/{thisiswoo})
 <!--
 **thisiswoo/thisiswoo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
