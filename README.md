@@ -18,5 +18,3 @@ Here are some ideas to get you started:
 [![Solved.ac Profile](http://mazassumnida.wtf/api/generate_badge?boj=thisiswoo)](https://solved.ac/thisiswoo)
 
 ![K-Junyyy's GitHub stats](https://github-readme-stats.vercel.app/api?username=thisiswoo&show_icons=true&theme=tokyonight)
-
-<img src="http://mazandi.herokuapp.com/api?handle={thisiswoo}&theme=warm"/>
