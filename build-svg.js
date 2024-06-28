@@ -61,3 +61,21 @@ weather.getWeatherOneCall(function (err, data) {
     })
   })
 })
+
+weather.getWeatherForecastForDays(7, function(err, data) {
+  if (err) {
+    console.error('Error fetching weather data:', err);
+    return;
+  }
+
+  try {
+    if (!data || !data.daily || !data.daily[0] || !data.daily[0].temp) {
+      throw new Error('Invalid data structure');
+    }
+
+    const degF = Math.round(data.daily[0].temp.max);
+    console.log('Max temperature:', degF);
+  } catch (error) {
+    console.error('Error processing weather data:', error.message);
+  }
+});
