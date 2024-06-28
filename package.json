@@ -9,6 +9,7 @@
   "dependencies": {
     "date-fns": "^2.22.1",
     "got": "^11.8.5",
-    "js-quantities": "^1.7.6"
+    "js-quantities": "^1.8.0",
+    "openweather-apis": "^4.5.0"
   }
 }
