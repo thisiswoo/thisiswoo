@@ -19,7 +19,7 @@ const emojis = {
 
 // Time working at PlanetScale
 function convertTZ(date, tzString) {
-    return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
+  return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
 }
 const today = convertTZ(new Date(), "Asia/Seoul");
 const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(today);
@@ -61,21 +61,3 @@ weather.getWeatherOneCall(function (err, data) {
     })
   })
 })
-
-weather.getWeatherForecastForDays(7, function(err, data) {
-  if (err) {
-    console.error('Error fetching weather data:', err);
-    return;
-  }
-
-  try {
-    if (!data || !data.daily || !data.daily[0] || !data.daily[0].temp) {
-      throw new Error('Invalid data structure');
-    }
-
-    const degF = Math.round(data.daily[0].temp.max);
-    console.log('Max temperature:', degF);
-  } catch (error) {
-    console.error('Error processing weather data:', error.message);
-  }
-});
