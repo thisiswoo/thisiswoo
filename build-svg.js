@@ -1,7 +1,8 @@
 const WEATHER_API_KEY = process.env.WEATHER_API_KEY
 
 let fs = require('fs')
-let formatDistance = require('date-fns/formatDistance')
+// let formatDistance = require('date-fns/formatDistance')
+let { formatDistance } = require('date-fns');
 let weather = require('openweather-apis')
 let qty = require('js-quantities')
 
