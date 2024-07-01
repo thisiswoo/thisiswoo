@@ -1,16 +1,22 @@
+# Hello world!
+![](https://github.com/thisiswoo/thisiswoo/blob/master/chat.svg)
+
 # 🌐Socials
 
 [![GithubPages](https://img.shields.io/badge/GithubPages(Blog)-222222?logo=githubpages&logoColor=white)](https://thisiswoo.github.io/)
 [![Vercel](https://img.shields.io/badge/Vercel(Portfolio)-000000?logo=vercel&logoColor=white)](https://thisiswoo.vercel.app/) 
 
-# 📊GitHub Stats
+[//]: # (# 📊GitHub Stats)
 
-![](https://github-readme-stats.vercel.app/api?username=thisiswoo&theme=dracula&hide_border=false&include_all_commits=false&count_private=false)
-![](https://github-readme-streak-stats.herokuapp.com/?user=thisiswoo&theme=dracula&hide_border=false)<br/>
+[//]: # ()
+[//]: # (![]&#40;https://github-readme-stats.vercel.app/api?username=thisiswoo&theme=dracula&hide_border=false&include_all_commits=false&count_private=false&#41;)
 
-# 🏆GitHub Trophies
+[//]: # (![]&#40;https://github-readme-streak-stats.herokuapp.com/?user=thisiswoo&theme=dracula&hide_border=false&#41;<br/>)
 
-![](https://github-profile-trophy.vercel.app/?username=thisiswoo&theme=radical&no-frame=false&no-bg=false&margin-w=4)
+[//]: # (# 🏆GitHub Trophies)
+
+[//]: # ()
+[//]: # (![]&#40;https://github-profile-trophy.vercel.app/?username=thisiswoo&theme=radical&no-frame=false&no-bg=false&margin-w=4&#41;)
 
 # 💻Tech Stack
 ## 🌑Back-end
