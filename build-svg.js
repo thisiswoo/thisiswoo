@@ -1,7 +1,6 @@
 const WEATHER_API_KEY = process.env.WEATHER_API_KEY
 
 let fs = require('fs')
-// let formatDistance = require('date-fns/formatDistance')
 let { formatDistance } = require('date-fns');
 let weather = require('openweather-apis')
 let qty = require('js-quantities')
@@ -37,6 +36,8 @@ weather.setAPPID(WEATHER_API_KEY)
 
 weather.getWeatherOneCall(function (err, data) {
   if (err) console.log(err)
+
+  console.log('weather data : ', data)
 
   const degF = Math.round(data.daily[0].temp.max)
   const degC = Math.round(qty(`${degF} tempF`).to('tempC').scalar)
