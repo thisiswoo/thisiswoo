@@ -326,7 +326,7 @@
     <g transform="translate(10, 192)" class="msg-4">
         <rect width="330" height="42" rx="18.0355" class="bubble" />
         <text x="15" y="27">
-            Come visit 👉 <a xlink:href="https://thisiswoo.github.io/">my blog</a> or <a xlink:href="https://thisiswoo.vercel.app/">my portfolio</a>
+            Come visit 👉 <a xlink:href="https://thisiswoo.github.io/" target="_blank">my blog</a> or <a xlink:href="https://thisiswoo.vercel.app/" target="_blank">my portfolio</a>
         </text>
     </g>
 
