@@ -274,12 +274,9 @@
 
     <!-- From -->
     <g transform="translate(10, 48)" class="msg-2">
-<!--        <rect width="410" height="66.1302" rx="18.0355" class="bubble" />-->
-<!--        <text x="15" y="27">I live in Seoul where the temperature in Korea</text>-->
-<!--        <text x="15" y="50">today is expected to be {degF}° F ({degC}° C) and <tspan class="emoji">{weatherEmoji}</tspan>️.</text>-->
         <rect width="410" height="66.1302" rx="18.0355" class="bubble" />
         <text x="15" y="27">I live in Seoul where the temperature in Korea</text>
-        <text x="15" y="50">today is expected to be 82.4°F (28°C) and ☀️.</text>
+        <text x="15" y="50">today is expected to be {degF}° F ({degC}° C) and <tspan class="emoji">{weatherEmoji}</tspan>️.</text>
     </g>
 
     <!-- typing 3 -->
@@ -378,7 +375,7 @@
 
     <!-- Thanks, Have a great -->
     <g transform="translate(10, 312)" class="msg-6">
-        <rect width="440" height="42" rx="18.0355" class="bubble" />
-        <text x="15" y="27">Thanks for stopping by, Have a great Monday! <tspan class="emoji">👋</tspan></text>
+        <rect width="410" height="42" rx="18.0355" class="bubble" />
+        <text x="15" y="27">Thanks for stopping by, Have a great {todayDay}! <tspan class="emoji">👋</tspan></text>
     </g>
 </svg>
