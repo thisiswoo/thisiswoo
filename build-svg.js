@@ -31,7 +31,6 @@ const convertTZ = (date, tzString) => {
 const today = convertTZ(new Date(), "Asia/Seoul");
 const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(today);
 
-
 // Today's weather
 weather.setLang('en')
 weather.setCoordinate(37.517235, 127.047325)
