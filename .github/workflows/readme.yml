@@ -17,10 +17,15 @@ jobs:
           node-version: 16
       - run: npm install
 
-      - name: log WEATHER_API_KEY
+      - name: Get weather data
         env:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-        run: echo "WEATHER_API_KEY is $WEATHER_API_KEY"
+          CITY: "1835848" # Seoul
+          COUNTRY_CODE: "Your Country Code" # replace with your country code
+        run: |
+#          curl -s "http://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY_CODE}&appid=${OPENWEATHER_API_KEY}&units=metric" > weather.json
+          curl -s "api.openweathermap.org/data/2.5/weather?id=${CITY}&appid=${WEATHER_API_KEY}"
+
 
       - name: Generate readme
         env:
