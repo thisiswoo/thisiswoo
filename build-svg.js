@@ -5,7 +5,8 @@ if (!WEATHER_API_KEY) {
   process.exit(1);
 }
 
-console.log(`Using WEATHER_API_KEY : ${WEATHER_API_KEY}`)
+// console.log(`Using WEATHER_API_KEY : ${WEATHER_API_KEY}`)
+console.log('Using WEATHER_API_KEY : ', process.env.WEATHER_API_KEY)
 
 let fs = require('fs-extra')
 let { formatDistance } = require('date-fns');
