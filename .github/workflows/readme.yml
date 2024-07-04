@@ -26,7 +26,6 @@ jobs:
 #          curl -s "http://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY_CODE}&appid=${OPENWEATHER_API_KEY}&units=metric" > weather.json
           curl -s "api.openweathermap.org/data/2.5/weather?id=${CITY}&appid=${WEATHER_API_KEY}"
 
-
       - name: Generate readme
         env:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
