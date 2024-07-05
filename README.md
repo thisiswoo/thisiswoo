@@ -1,5 +1,5 @@
 # 👋Hello World!
-![](https://github.com/thisiswoo/thisiswoo/main/master/chat.svg)
+![chat_svg](https://github.com/thisiswoo/thisiswoo/blob/main/chat.svg)
 
 ![](https://raw.githubusercontent.com/thisiswoo/thisiswoo/main/chat.svg)
 
