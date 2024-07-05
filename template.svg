@@ -349,10 +349,8 @@
 
     <!-- Blog and Portfolio -->
     <g transform="translate(10, 264)" class="msg-5">
-        <rect width="330" height="42" rx="18.0355" class="bubble" />
-        <text x="15" y="27">
-            Come visit 👇 my blog or my web portfolio site
-        </text>
+        <rect width="380" height="42" rx="18.0355" class="bubble" />
+        <text x="15" y="27">Come visit 👇 My Blog or My Web Portfolio</text>
     </g>
 
     <!-- typing 6 -->
