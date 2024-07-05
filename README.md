@@ -1,6 +1,7 @@
 # 👋Hello World!
 ![chat_svg](https://github.com/thisiswoo/thisiswoo/blob/master/chat.svg)
-[//]: # (![]&#40;https://raw.githubusercontent.com/thisiswoo/thisiswoo/main/chat.svg&#41;)
+
+![](https://raw.githubusercontent.com/thisiswoo/thisiswoo/main/chat.svg)
 
 ## 🌐Socials
 [![GithubPages](https://img.shields.io/badge/GithubPages(Blog)-222222?logo=githubpages&logoColor=white)](https://thisiswoo.github.io/)
