@@ -1,5 +1,5 @@
 # Hello World!
-![](https://github.com/thisiswoo/thisiswoo/blob/master/chat.svg)
+![](https://github.com/thisiswoo/thisiswoo/blob/master/chat.svg?token=AAABPWFQB3UQVH67GAPKNRLAXLBQG)
 
 # 🌐Socials
 [![GithubPages](https://img.shields.io/badge/GithubPages(Blog)-222222?logo=githubpages&logoColor=white)](https://thisiswoo.github.io/)
