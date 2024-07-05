@@ -276,7 +276,7 @@
     <g transform="translate(10, 48)" class="msg-2">
         <rect width="410" height="66.1302" rx="18.0355" class="bubble" />
         <text x="15" y="27">I live in Seoul where the temperature in Korea</text>
-        <text x="15" y="50">today is expected to be {degF}° F ({degC}° C) and <tspan class="emoji">{weatherEmoji}</tspan>️.</text>
+        <text x="15" y="50">today is expected to be {degC}° C ({degF}° F) and <tspan class="emoji">{weatherEmoji}</tspan>️.</text>
     </g>
 
     <!-- typing 3 -->
@@ -351,7 +351,7 @@
     <g transform="translate(10, 264)" class="msg-5">
         <rect width="330" height="42" rx="18.0355" class="bubble" />
         <text x="15" y="27">
-            Come visit 👉<a xlink:href="https://thisiswoo.github.io/" target="_blank">my blog</a> or <a xlink:href="https://thisiswoo.vercel.app/" target="_blank">my portfolio</a>
+            Come visit 👇 my blog or my web portfolio site
         </text>
     </g>
 
