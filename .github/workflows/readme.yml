@@ -17,13 +17,6 @@ jobs:
           node-version: 16
       - run: npm install
 
-      - name: Get weather data
-        env:
-          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-          CITY: "1835848" # Seoul
-        run: |
-          curl -s "http://api.openweathermap.org/data/2.5/weather?id=${CITY}&appid=${WEATHER_API_KEY}"
-
       - name: Generate readme
         env:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
@@ -32,7 +25,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          author_name: GeonWoo Lee
+          author_name: Geonwoo Lee
           author_email: thisiswoo0594@gmail.com
           message: "Auto updating my readme"
           add: "*.svg"

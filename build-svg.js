@@ -1,69 +1,121 @@
 const WEATHER_API_KEY = process.env.WEATHER_API_KEY
 
-if (!WEATHER_API_KEY) {
-  console.log('WEATHER_API_KEY is is not set')
-  process.exit(1);
-}
+// let fs = require('fs')
+// let got = require('got')
+// let qty = require('js-quantities')
+// let formatDistance = require('date-fns/formatDistance')
+// let { formatDistance } = require('date-fns');
 
-// console.log(`Using WEATHER_API_KEY : ${WEATHER_API_KEY}`)
-console.log('Using WEATHER_API_KEY : ', process.env.WEATHER_API_KEY)
+import got from 'got';
+import fs from 'fs-extra';
+import qty from 'js-quantities';
+import { formatDistance }from 'date-fns';
 
-let fs = require('fs-extra')
-let { formatDistance } = require('date-fns');
-let weather = require('openweather-apis')
-let qty = require('js-quantities')
+let WEATHER_DOMAIN = 'http://dataservice.accuweather.com'
 
 const emojis = {
-  '01d': '☀️',
-  '02d': '⛅️',
-  '03d': '☁️',
-  '04d': '☁️',
-  '09d': '🌧',
-  '10d': '🌦',
-  '11d': '🌩',
-  '13d': '❄️',
-  '50d': '🌫'
+  1: '☀️',
+  2: '☀️',
+  3: '🌤',
+  4: '🌤',
+  5: '🌤',
+  6: '🌥',
+  7: '☁️',
+  8: '☁️',
+  11: '🌫',
+  12: '🌧',
+  13: '🌦',
+  14: '🌦',
+  15: '⛈',
+  16: '⛈',
+  17: '🌦',
+  18: '🌧',
+  19: '🌨',
+  20: '🌨',
+  21: '🌨',
+  22: '❄️',
+  23: '❄️',
+  24: '🌧',
+  25: '🌧',
+  26: '🌧',
+  29: '🌧',
+  30: '🥵',
+  31: '🥶',
+  32: '💨',
+}
+
+// Cheap, janky way to have variable bubble width
+const dayBubbleWidths = {
+  Monday: 235,
+  Tuesday: 235,
+  Wednesday: 260,
+  Thursday: 245,
+  Friday: 220,
+  Saturday: 245,
+  Sunday: 230,
 }
 
 // Time working at PlanetScale
-const convertTZ = (date, tzString) => {
-  return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
-}
-const today = convertTZ(new Date(), "Asia/Seoul");
-const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(today);
+const today = new Date()
+const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(
+    today
+)
+
+const psTime = formatDistance(new Date(2020, 12, 14), today, {
+  addSuffix: false,
+})
 
 // Today's weather
-weather.setLang('en')
-weather.setCoordinate(37.517235, 127.047325)
-weather.setUnits('imperial')
-weather.setAPPID(WEATHER_API_KEY)
+const locationKey = '226081' // Seoul
+let url = `forecasts/v1/daily/1day/${locationKey}?apikey=${WEATHER_API_KEY}`
 
-weather.getWeatherOneCall( (err, data) => {
-  if (err) console.log(err)
+// try {
+//   const response = await got(url, {
+//     headers: {
+//       'Authorization': `Bearer ${WEATHER_API_KEY}`
+//     },
+//     prefixUrl: WEATHER_DOMAIN
+//   });
+//   console.log(response.body);
+// } catch (error) {
+//   console.error(error.response.body);
+// }
 
-  console.log('weather data : ', data)
-
-  const degF = Math.round(data.daily[0].temp.max)
-  const degC = Math.round(qty(`${degF} tempF`).to('tempC').scalar)
-  const icon = data.daily[0].weather[0].icon
-
-  fs.readFile('template.svg', 'utf-8', (error, data) => {
-    if (error) {
-      console.error(error)
-      return
-    }
-
-    data = data.replace('{degF}', degF)
-    data = data.replace('{degC}', degC)
-    data = data.replace('{weatherEmoji}', emojis[icon])
-    // data = data.replace('{psTime}', psTime)
-    data = data.replace('{todayDay}', todayDay)
-
-    data = fs.writeFile('chat.svg', data, (err) => {
-      if (err) {
-        console.error(err)
-        return
-      }
-    })
-  })
+got(url, {
+  // headers: {
+  //   'Authorization': `Bearer ${WEATHER_API_KEY}`
+  // },
+  prefixUrl: WEATHER_DOMAIN
 })
+    .then((response) => {
+      console.log(response.body)
+      let json = JSON.parse(response.body)
+
+      const degF = Math.round(json.DailyForecasts[0].Temperature.Maximum.Value)
+      const degC = Math.round(qty(`${degF} tempF`).to('tempC').scalar)
+      const icon = json.DailyForecasts[0].Day.Icon
+
+      fs.readFile('template.svg', 'utf-8', (error, data) => {
+        if (error) {
+          return
+        }
+
+        data = data.replace('{degF}', degF)
+        data = data.replace('{degC}', degC)
+        data = data.replace('{weatherEmoji}', emojis[icon])
+        data = data.replace('{psTime}', psTime)
+        data = data.replace('{todayDay}', todayDay)
+        data = data.replace('{dayBubbleWidth}', dayBubbleWidths[todayDay])
+
+        data = fs.writeFile('chat.svg', data, (err) => {
+          if (err) {
+            console.error(err)
+            return
+          }
+        })
+      })
+    })
+    .catch((err) => {
+      // TODO: something better
+      console.log(err)
+    })
