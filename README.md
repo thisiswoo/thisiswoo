@@ -1,15 +1,9 @@
-![imessage](https://github.com/thisiswoo/thisiswoo/blob/master/chat.svg)
+# Hello World!
+![](https://github.com/thisiswoo/thisiswoo/blob/master/chat.svg)
 
-# (# 🌐Socials)
+# 🌐Socials
 [![GithubPages](https://img.shields.io/badge/GithubPages(Blog)-222222?logo=githubpages&logoColor=white)](https://thisiswoo.github.io/)
 [![Vercel](https://img.shields.io/badge/Vercel(Portfolio)-000000?logo=vercel&logoColor=white)](https://thisiswoo.vercel.app/) 
-
-# 📊GitHub Stats
-![](https://github-readme-stats.vercel.app/api?username=thisiswoo&theme=dracula&hide_border=false&include_all_commits=false&count_private=false)
-![](https://github-readme-streak-stats.herokuapp.com/?user=thisiswoo&theme=dracula&hide_border=false)<br/>
-
-# 🏆GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=thisiswoo&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
 # 💻Tech Stack
 ## 🌑Back-end
