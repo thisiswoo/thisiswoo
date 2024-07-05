@@ -1,11 +1,5 @@
 const WEATHER_API_KEY = process.env.WEATHER_API_KEY
 
-// let fs = require('fs')
-// let got = require('got')
-// let qty = require('js-quantities')
-// let formatDistance = require('date-fns/formatDistance')
-// let { formatDistance } = require('date-fns');
-
 import got from 'got';
 import fs from 'fs-extra';
 import qty from 'js-quantities';
@@ -69,22 +63,7 @@ const psTime = formatDistance(new Date(2020, 12, 14), today, {
 const locationKey = '226081' // Seoul
 let url = `forecasts/v1/daily/1day/${locationKey}?apikey=${WEATHER_API_KEY}`
 
-// try {
-//   const response = await got(url, {
-//     headers: {
-//       'Authorization': `Bearer ${WEATHER_API_KEY}`
-//     },
-//     prefixUrl: WEATHER_DOMAIN
-//   });
-//   console.log(response.body);
-// } catch (error) {
-//   console.error(error.response.body);
-// }
-
 got(url, {
-  // headers: {
-  //   'Authorization': `Bearer ${WEATHER_API_KEY}`
-  // },
   prefixUrl: WEATHER_DOMAIN
 })
     .then((response) => {
