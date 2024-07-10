@@ -50,11 +50,11 @@ const dayBubbleWidths = {
 }
 
 // Time working at PlanetScale
-const todayKR = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })
-const today = new Date(todayKR)
-const todayDay = new Intl.DateTimeFormat('ko-KR', { weekday: 'long' }).format(
-    today
-)
+const today = new Date();
+const kstOffset = 9 * 60 * 60 * 1000; // KST는 UTC 보다 9시간 빠름
+const kstTime = new Date(today.getTime() + kstOffset);
+
+const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(kstTime);
 
 const psTime = formatDistance(new Date(2020, 12, 14), today, {
   addSuffix: false,
