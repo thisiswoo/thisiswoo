@@ -50,8 +50,9 @@ const dayBubbleWidths = {
 }
 
 // Time working at PlanetScale
-const today = new Date()
-const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(
+const todayKR = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })
+const today = new Date(todayKR)
+const todayDay = new Intl.DateTimeFormat('ko-KR', { weekday: 'long' }).format(
     today
 )
 
