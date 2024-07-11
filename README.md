@@ -25,6 +25,6 @@
 # ⚽️Playground!
 ![](./profile-3d-contrib/profile-gitblock.svg)
 
-## 🐉️PlaygroundSnake
-![](https://activity-graph.herokuapp.com/graph?username=thisiswoo&theme=react-dark&hide_border=true&area=true)
-![](https://github.com/thisiswoo/thisiswoo/blob/output/github-contribution-grid-snake.svg)
+# 🐉️PlaygroundSnake
+<!--snake🐍-->
+<img src="https://github.com/thisiswoo/thisiswoo/blob/output/github-snake-dark.svg" width="100%">
