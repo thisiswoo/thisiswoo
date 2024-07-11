@@ -1,7 +1,7 @@
 name: Generate Snake
 on:
   schedule:
-    - cron: "0 */24 * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -22,7 +22,7 @@ jobs:
           github_user_name: thisiswoo
           outputs: |
             dist/github-snake.svg
-            dist/github-snake-dark.svg?color_snake=#ff8080&color_dots=#EEEEEE,#d9ffd4,#b7ffad,#8fff80,#62ff4d?palette=github-dark
+            dist/github-snake-dark.svg?color_snake=#ff8080&color_dots=#0d1116,#d9ffd4,#b7ffad,#8fff80,#62ff4d?palette=github-dark
 
       - name: push github-contribution-grid-snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
