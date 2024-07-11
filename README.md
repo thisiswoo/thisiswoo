@@ -23,8 +23,8 @@
 ![Confluence](https://img.shields.io/badge/Confluence-172B4D?logo=confluence&logoColor=white) ![Slack](https://img.shields.io/badge/Slack-4A154B?logo=slack&logoColor=white) 
 
 # ⚽️Playground!
+## 🛠️Commit Blocks
 ![](./profile-3d-contrib/profile-gitblock.svg)
 
-# 🐉️PlaygroundSnake
-<!--snake🐍-->
+## 🐍️Commit Snake
 <img src="https://github.com/thisiswoo/thisiswoo/blob/output/github-snake-dark.svg" width="100%">
