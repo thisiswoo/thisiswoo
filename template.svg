@@ -415,7 +415,8 @@
 
     <!-- Have a great -->
     <g transform="translate(10, 360)" class="msg-7">
-        <rect width="260" height="42" rx="18.0355" class="bubble" />
+<!--        <rect width="260" height="42" rx="18.0355" class="bubble" />-->
+        <rect width="{{ dayBubbleWidth }}" height="42" rx="18.0355" class="bubble" />
         <text x="15" y="27">Have a great {todayDay}! <tspan class="emoji">👋</tspan></text>
     </g>
 </svg>
