@@ -22,7 +22,7 @@ jobs:
           github_user_name: thisiswoo
           outputs: |
             dist/github-snake.svg
-            dist/github-snake-dark.svg?color_snake=#ffbc6f&color_dots=#cdd9e5,#8ddb8c,#96d0ff,#eac55f,#ffb8b0
+            dist/github-snake-dark.svg?color_snake=#ffbc6f&color_dots=#d3dbe3,#8ddb8c,#96d0ff,#eac55f,#ffb8b0
 
       - name: push github-contribution-grid-snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
