@@ -319,9 +319,9 @@
 
     <!-- Work1 -->
     <g transform="translate(10, 120)" class="msg-3">
-        <rect width="470" height="66.1302" rx="18.0355" class="bubble" />
-        <text x="15" y="27">I'm Lee Geon-Woo, a 4th-year backend developer</text>
-        <text x="15" y="50">who is working on a Java &amp; Spring-based DevOps job.</text>
+        <rect width="440" height="66.1302" rx="18.0355" class="bubble" />
+        <text x="15" y="27">I'm a 4th-year backend developer who is working</text>
+        <text x="15" y="50">on a Java &amp; Spring-based DevOps job.</text>
     </g>
 
     <!-- typing 4 -->
